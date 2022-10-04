@@ -1,0 +1,335 @@
+@mixin article-container($padding-top, $v1, $margin-top-value:42px, $padding-bottom-value: 30px){
+    position: relative;
+    background: #FFFFFF;
+    #{$padding-top}: $v1;
+    margin-top: $margin-top-value;
+    padding-bottom: $padding-bottom-value;
+    //min-height: 370px;
+}
+@mixin article-images($left, $v1, $top, $v2, $width, $v3){
+    position:absolute;
+    #{$left}: $v1;
+    #{$top}: $v2;
+    #{$width}: $v3;
+}
+
+@mixin article-p($p1, $v1, $p2, $v2, $p3, $v3, $p4, $v4 ){
+    margin: 0px 22px;
+    font-weight: 400;
+    #{$p1}: $v1;
+    #{$p2}: $v2;
+    #{$p3}: $v3;
+    #{$p4}: $v4;
+}
+
+@mixin article-div($width, $v1, $height, $v2, $left, $v3, $top, $v4, $border-radius, $v5, $background, $v6){
+    position: absolute;
+    #{$width}: $v1;
+    #{$height}: $v2;
+    #{$left}: $v3;
+    #{$top}: $v4;
+    #{$border-radius}: $v5;
+    #{$background}: $v6;
+}
+
+@mixin text-features($p1,$v1, $p2, $v2, $p3, $v3, $p4, $v4, $color-value:#000000){
+    #{$p1}: $v1;
+    #{$p2}: $v2;
+    #{$p3}: $v3; 
+    #{$p4}: $v4;
+    color: $color-value;
+}
+
+@mixin pricing-articles($border-color-value: #FB3B64){
+    text-align: center;
+    border: 1px solid $border-color-value;
+    border-radius: 18px;
+    min-height: 251px;
+}
+@mixin pricing-articles-div($p1, $v1){
+    width:50%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    #{$p1}: $v1;
+}
+@mixin pricing-article-text($color-value:black){
+    display: block;
+    position: relative;
+    top:70px;
+    color: $color-value;
+}
+
+@mixin pricing-button($p1,$v1, $p2, $v2)
+{
+    position: relative;
+    top:226px;
+    width: 150px;
+    height: 50px;
+    background: #EB476E;
+    border-radius: 23px;
+    border:none;
+    #{$p1}: $v1;
+    #{$p2}: $v2;
+}
+
+@mixin media-queries($percentage)
+{
+    .first-section
+    {
+        article:nth-of-type(1)
+        {
+            /*@if $percentage >= 50{
+                padding-top: calcularPorcentaje($percentage, 174) * 1px;
+            }*/
+            padding-top: calcularPorcentaje($percentage, 174) * 1px;
+            
+            img:nth-of-type(1), source
+            {
+                /*@if $percentage >= 50{
+                    max-width: calcularPorcentaje($percentage, 192.76) * 1px;
+                    top: calcularPorcentaje($percentage, 37.11) * 1px;
+                }*/
+                max-width: calcularPorcentaje($percentage, 192.76) * 1px;
+                top: calcularPorcentaje($percentage, 37.11) * 1px;
+                left: calcularPorcentaje($percentage, 55.27) * 1px;
+            }
+        }
+        article:nth-of-type(2)
+        {
+            padding-top: calcularPorcentaje($percentage, 174) * 1px;
+            .first-section__figure
+            {
+                width: calcularPorcentaje($percentage, 131.88) * 1px;
+                height: calcularPorcentaje($percentage, 131.88) * 1px;
+                left: calcularPorcentaje($percentage, 90) * 1px;
+                top: calcularPorcentaje($percentage, 12) * 1px;
+            }
+            img
+            {
+                max-width: calcularPorcentaje($percentage, 175) * 1px;
+                left: calcularPorcentaje($percentage, 90) * 1px;
+                top: calcularPorcentaje($percentage, 19) * 1px;
+            }
+        }
+        article:nth-of-type(3)
+        {
+             //height: calcularPorcentaje($percentage, 195) * 1px;
+            img
+            {
+                //left: calcularPorcentaje($percentage, -11.69) * 1px;
+                //top: calcularPorcentaje($percentage, 24.64) * 1px;
+                //max-width: calcularPorcentaje($percentage, 295.73) * 1px;;
+            }
+        }
+    }
+    .first-section__figure
+    {
+        /*@if $percentage >= 50{
+            width: calcularPorcentaje($percentage, 90.12) * 1px;
+            height: calcularPorcentaje($percentage, 90.12) * 1px;
+            top: calcularPorcentaje($percentage, 15) * 1px;
+        }*/
+        width: calcularPorcentaje($percentage, 90.12) * 1px;
+        height: calcularPorcentaje($percentage, 90.12) * 1px;
+        top: calcularPorcentaje($percentage, 15) * 1px;
+        left: calcularPorcentaje($percentage, 160) * 1px;
+    }
+    section:nth-of-type(3) form input[type=submit]  
+    {
+        /*
+        @if $ancho-pantalla == 'menor' {
+            margin-left: calcularPorcentaje($percentage, 86) * 1px;
+        }@else{
+            margin-left: calcularPorcentaje($percentage, 116) * 1px;
+        }*/
+        
+    }
+    footer
+    {
+        span
+        {
+            left:calcularPorcentaje($percentage,17) * 1px;
+        }
+        img:nth-of-type(1)
+        {
+            //left:calcularPorcentaje($percentage,277) * 1px;
+        }
+        img:nth-of-type(2)
+        {
+            //left:calcularPorcentaje($percentage,321) * 1px;
+        }
+    }
+}
+@mixin first-section-desktop-version($percentage)
+{
+    //FIRST-SECTION CONTENT
+    .first-section  
+    {
+        padding: 105px calcularPorcentaje2($percentage, 154.26) * 1px; //154.26px;
+        display: flex;
+        flex-direction: column;
+        gap: 37px;
+        article.first-section__article
+        {
+            display: flex;
+            flex-direction: row;
+            padding: 0px;
+            height: calcularPorcentaje2($percentage, 227.4) * 1px;//227.4px;
+        }
+        p.first-section__p
+        {
+            margin:0px;
+        }
+        p.first-section__p-1
+        {
+            font-size: 3.6rem;
+        }
+        p.first-section__p-2
+        {
+            font-size: 1.6rem;
+        }
+        article.first-section__article-1
+        {
+            .first-section__row
+            {
+                flex-basis: 50%;
+                position: relative;
+            }
+            .first-section__row-1
+            {
+                order:2
+            }
+            .first-section__row-2
+            {
+                order:1;
+                margin-top: calcularPorcentaje2($percentage, 55.92) * 1px;;
+                margin-left: calcularPorcentaje2($percentage, 22.12) * 1px;;
+            }
+            .first-section__figure
+            {
+                width: 100%;
+                height: 100%;
+                max-width: calcularPorcentaje2($percentage, 112.24) * 1px;
+                max-height: calcularPorcentaje2($percentage, 112.24) * 1px;
+                top:calcularPorcentaje2($percentage, 43) * 1px;
+                left:calcularPorcentaje2($percentage, 167) * 1px;
+                //right:125px;
+            }
+            img.first-section__image
+            {
+                top: calcularPorcentaje2($percentage, 69.44) * 1px;
+                left:calcularPorcentaje2($percentage, 35.64) * 1px;
+                max-width: calcularPorcentaje2($percentage, 237.5) * 1px;;
+                width: 100%;
+            }
+            
+            p.first-section__p-2
+            {
+                margin-top:calcularPorcentaje2($percentage, 18.42) * 1px;
+            }
+            .first-section__border
+            {
+               border-bottom: 4px solid #FB3B64; 
+            }
+        }
+        article.first-section__article-2
+        {
+            margin-top:0px;
+            .first-section__row
+            {
+                position: relative;
+            }
+            .first-section__row-1
+            {
+                flex-basis: 60%;
+                order:1
+            }
+            .first-section__row-2
+            {
+                flex-basis: 40%;
+                order:2;
+                margin-top:calcularPorcentaje2($percentage, 42.4) * 1px;
+                //margin-left:calcularPorcentaje2($percentage, 36) * 1px;
+                margin-right: 20px;
+                //padding-right: 20px;
+            }
+            .first-section__figure
+            {
+                width: 100%;
+                height: 100%;
+                max-width: calcularPorcentaje2($percentage, 196.67) * 1px;
+                max-height: calcularPorcentaje2($percentage, 196.67) * 1px;
+                top: calcularPorcentaje2($percentage, 7.98) * 1px;
+                left: calcularPorcentaje2($percentage, 43.02) * 1px;
+                //right:125px;
+            }
+            img.first-section__image
+            {
+                top: calcularPorcentaje2($percentage, 17.82) * 1px;
+                left: calcularPorcentaje2($percentage, 43.02) * 1px;
+                max-width: calcularPorcentaje2($percentage, 261.81) * 1px;
+                width: 100%;
+            }
+            p.first-section__p-2
+            {
+                margin-top:calcularPorcentaje2($percentage, 18.42) * 1px;
+            }
+            .first-section__border
+            {
+               border-bottom: 4px solid $primary-color; 
+            }
+        }
+        article.first-section__article-3
+        {
+            margin-top:0px;
+            background: #F7F7F7;
+            gap:37.46px;
+            .first-section__row
+            {
+                position: relative;
+            }
+            .first-section__row-1
+            {
+                order:1;
+                //margin-top:42.61px;
+                padding-left: calcularPorcentaje2($percentage, 22.12) * 1px;
+                padding-top: calcularPorcentaje2($percentage, 42.64) * 1px;;
+                background: #FFFFFF;
+                flex-basis: 60%;
+            }
+            div.first-section__row-2
+            {
+                flex-basis: 40%;
+                order:2;
+                margin-top:0px;
+                height: 100%;
+                img
+                {
+                    position: absolute;
+                    left:calcularPorcentaje2($percentage, 38.29) * 1px;
+                    top: calcularPorcentaje2($percentage, 60.36) * 1px;
+                    max-width: calcularPorcentaje2($percentage, 163.25) * 1px;
+                    width: 100%;
+                }
+            }
+            p.first-section__p-2
+            {
+               // @include article-p(font-family, $primary-font-family, font-size, 1.4rem, line-height, 21px, margin-top, 20.33px);
+                /*margin-right: 94px;*/
+                margin-top: calcularPorcentaje2($percentage, 18.42) * 1px;
+            }
+            .first-section__border
+            {
+               border-bottom: 4px solid $green-color; 
+            }
+        }
+         .first-section__border
+        {
+            width: 80%;
+            margin-top: calcularPorcentaje2($percentage, 30.73) * 1px;
+            margin-bottom:70px;
+            max-width:327.64px;//200.97
+        }
+    }
+}

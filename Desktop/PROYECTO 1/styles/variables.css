@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/static/OpenSans/OpenSans-Regular.ttf") format("woff2");
+  font-family: "Raleway";
+  src: url("fonts/static/Raleway-Regular.ttf") format("woff2");
+}
+
+/*# sourceMappingURL=variables.css.map */
