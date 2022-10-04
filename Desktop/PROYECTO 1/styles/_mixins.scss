@@ -169,13 +169,14 @@
         padding: 105px calcularPorcentaje2($percentage, 154.26) * 1px; //154.26px;
         display: flex;
         flex-direction: column;
-        gap: 37px;
+        gap: 37.46px;
         article.first-section__article
         {
             display: flex;
             flex-direction: row;
             padding: 0px;
-            height: calcularPorcentaje2($percentage, 227.4) * 1px;//227.4px;
+            height: calcularPorcentaje2($percentage, 270) * 1px;//227.4px;
+            gap:37.46px;
         }
         p.first-section__p
         {
@@ -193,34 +194,35 @@
         {
             .first-section__row
             {
-                flex-basis: 50%;
                 position: relative;
             }
             .first-section__row-1
             {
+                flex-basis: 60%;
                 order:2
             }
             .first-section__row-2
             {
+                flex-basis: 40%;
                 order:1;
-                margin-top: calcularPorcentaje2($percentage, 55.92) * 1px;;
-                margin-left: calcularPorcentaje2($percentage, 22.12) * 1px;;
+                margin-top: calcularPorcentaje2($percentage, 66.43) * 1px;;
+                margin-left: calcularPorcentaje2($percentage, 26.28) * 1px;
             }
             .first-section__figure
             {
                 width: 100%;
                 height: 100%;
-                max-width: calcularPorcentaje2($percentage, 112.24) * 1px;
-                max-height: calcularPorcentaje2($percentage, 112.24) * 1px;
-                top:calcularPorcentaje2($percentage, 43) * 1px;
-                left:calcularPorcentaje2($percentage, 167) * 1px;
+                max-width: calcularPorcentaje2($percentage, 131.4) * 1px;
+                max-height: calcularPorcentaje2($percentage, 131.4) * 1px;
+                top:calcularPorcentaje2($percentage, 27.74) * 1px;
+                left:calcularPorcentaje2($percentage, 195) * 1px;
                 //right:125px;
             }
             img.first-section__image
             {
                 top: calcularPorcentaje2($percentage, 69.44) * 1px;
-                left:calcularPorcentaje2($percentage, 35.64) * 1px;
-                max-width: calcularPorcentaje2($percentage, 237.5) * 1px;;
+                left:calcularPorcentaje2($percentage, 40) * 1px;
+                max-width: calcularPorcentaje2($percentage, 282.10) * 1px;;
                 width: 100%;
             }
             
@@ -249,31 +251,31 @@
             {
                 flex-basis: 40%;
                 order:2;
-                margin-top:calcularPorcentaje2($percentage, 42.4) * 1px;
+                margin-top:calcularPorcentaje2($percentage, 50.37) * 1px;
                 //margin-left:calcularPorcentaje2($percentage, 36) * 1px;
-                margin-right: 20px;
+                //margin-right: 20px;
                 //padding-right: 20px;
             }
             .first-section__figure
             {
                 width: 100%;
                 height: 100%;
-                max-width: calcularPorcentaje2($percentage, 196.67) * 1px;
-                max-height: calcularPorcentaje2($percentage, 196.67) * 1px;
-                top: calcularPorcentaje2($percentage, 7.98) * 1px;
-                left: calcularPorcentaje2($percentage, 43.02) * 1px;
+                max-width: calcularPorcentaje2($percentage, 233.6) * 1px;
+                max-height: calcularPorcentaje2($percentage, 233.6) * 1px;
+                top: calcularPorcentaje2($percentage, 8.76) * 1px;
+                left: calcularPorcentaje2($percentage, 51.1) * 1px;
                 //right:125px;
             }
             img.first-section__image
             {
-                top: calcularPorcentaje2($percentage, 17.82) * 1px;
-                left: calcularPorcentaje2($percentage, 43.02) * 1px;
-                max-width: calcularPorcentaje2($percentage, 261.81) * 1px;
+                top: calcularPorcentaje2($percentage, 21.17) * 1px;
+                left: calcularPorcentaje2($percentage, 51.1) * 1px;
+                max-width: calcularPorcentaje2($percentage, 310.98) * 1px;
                 width: 100%;
             }
             p.first-section__p-2
             {
-                margin-top:calcularPorcentaje2($percentage, 18.42) * 1px;
+                margin-top:calcularPorcentaje2($percentage, 21.9) * 1px;
             }
             .first-section__border
             {
@@ -284,7 +286,6 @@
         {
             margin-top:0px;
             background: #F7F7F7;
-            gap:37.46px;
             .first-section__row
             {
                 position: relative;
@@ -293,8 +294,8 @@
             {
                 order:1;
                 //margin-top:42.61px;
-                padding-left: calcularPorcentaje2($percentage, 22.12) * 1px;
-                padding-top: calcularPorcentaje2($percentage, 42.64) * 1px;;
+                padding-left: calcularPorcentaje2($percentage, 28.44) * 1px;
+                padding-top: calcularPorcentaje2($percentage, 50.61) * 1px;;
                 background: #FFFFFF;
                 flex-basis: 60%;
             }
@@ -307,9 +308,9 @@
                 img
                 {
                     position: absolute;
-                    left:calcularPorcentaje2($percentage, 38.29) * 1px;
-                    top: calcularPorcentaje2($percentage, 60.36) * 1px;
-                    max-width: calcularPorcentaje2($percentage, 163.25) * 1px;
+                    left:calcularPorcentaje2($percentage, 45.48) * 1px;
+                    top: calcularPorcentaje2($percentage, 71.69) * 1px;
+                    max-width: calcularPorcentaje2($percentage, 193.98) * 1px;
                     width: 100%;
                 }
             }
@@ -317,7 +318,7 @@
             {
                // @include article-p(font-family, $primary-font-family, font-size, 1.4rem, line-height, 21px, margin-top, 20.33px);
                 /*margin-right: 94px;*/
-                margin-top: calcularPorcentaje2($percentage, 18.42) * 1px;
+                margin-top: calcularPorcentaje2($percentage, 21.9) * 1px;
             }
             .first-section__border
             {
@@ -326,10 +327,10 @@
         }
          .first-section__border
         {
-            width: 80%;
+            width: 100%;
             margin-top: calcularPorcentaje2($percentage, 30.73) * 1px;
             margin-bottom:70px;
-            max-width:327.64px;//200.97
+            max-width:201.38px;//200.97
         }
     }
 }
