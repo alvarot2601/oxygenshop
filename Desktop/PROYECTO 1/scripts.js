@@ -7,9 +7,11 @@ function openMenu(){
 	{
 		ul.style.display = "block";
 		header.style.height = "auto";
+		header.style.paddingBottom = "33.65px";
 	}
 	else
 	{
+		header.style.paddingBottom = "0px";
 		ul.style.display = "none";
 	}
 }
