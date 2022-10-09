@@ -16,9 +16,12 @@ header
     {
         width: 20px;
         height: 12px;
-        background-image: url(../images/open-menu.svg);
+        background-image: url("../images/open-menu.svg");
         border: none;
         margin-right: 30px;
+        background-color: #ffffff;
+        background-position: center;
+        background-size: cover;
        /* right:29px;
         top:29px;*/
     }
@@ -42,7 +45,7 @@ header
     }
     ul:nth-of-type(2)
     {
-        display:none;
+        
         list-style-type: none;
         font-family: $primary-font-family;
         font-weight: 700;
@@ -53,7 +56,7 @@ header
         text-transform: uppercase;
         padding: 0;
         margin-left: 25px;
-        margin-top: 40px;
+        margin-top: 20px;
         li
         {
             margin-bottom:14px;
@@ -63,4 +66,9 @@ header
             margin-bottom:0px;
         }
     }
+}
+.header-open
+{
+    padding-bottom: 33.65px;
+    height: auto;
 }

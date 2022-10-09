@@ -182,14 +182,14 @@
                 max-width: calcularPorcentaje2($percentage, 154.8) * 1px;
                 max-height: calcularPorcentaje2($percentage, 154.8) * 1px;
                 top: calcularPorcentaje2($percentage, 58) * 1px;
-                left: calcularPorcentaje2($percentage, 190) * 1px;
+                left: calcularPorcentaje2($percentage, 250) * 1px;
                 //right:125px;
             }
             
             img.first-section__image
             {
                 top: calcularPorcentaje2($percentage, 97.18) * 1px;
-                //left:calcularPorcentaje2($percentage, 40) * 1px;
+                left:calcularPorcentaje2($percentage, 60) * 1px;
                 max-width: calcularPorcentaje2($percentage, 332.33) * 1px;
             }
             p.first-section__p-1
@@ -254,4 +254,21 @@
             max-width: calcularPorcentaje2($percentage, 201.38) * 1px;   //201.38px;//200.97
         }
     }
+}
+@mixin article-image-3($percentage){
+    .first-section
+    {
+        article.first-section__article-3
+        {
+            div.first-section__row-2
+            {
+                img
+                {
+                    left:calcularPorcentaje2($percentage, 38.29) * 1px;
+                }
+            }
+            
+        }
+    }
+    
 }

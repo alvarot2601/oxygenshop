@@ -4,10 +4,6 @@
 @import "header";
 @import "main";
 
-//MIXINS
-
-            
-
 * { 
     box-sizing: border-box;
     margin: 0;
@@ -29,6 +25,22 @@ img
     display: block;
     margin: auto;
 }
+//clase para hacer desaparecer el ul del header
+.not-display
+{
+    display: none;
+}
+//percentage scroller
+#percentage-scroller
+{
+    height: 5px;
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
 .first-section  
 {
     background: #F7F7F7;
@@ -328,6 +340,16 @@ footer
 }
 .pricing-article__list-item--first{
     margin-top:25px;
+}
+.pricing-article__list-1{
+    .pricing-article__list-item:nth-of-type(4),.pricing-article__list-item:nth-of-type(5){
+        list-style-image: url("../images/x.svg");  
+    }
+}
+.pricing-article__list-2{
+    .pricing-article__list-item:nth-of-type(5){
+        list-style-image: url("../images/x.svg");  
+    }
 }
 
 .third-section__span
