@@ -80,6 +80,16 @@
                 display: block;
             }
         }
+        ul:nth-of-type(2)
+        {
+            display: none;
+        }
+    }
+    //clase que se le añade al header al pulsar en la hamburguesa   
+    .header-open
+    {
+        padding-bottom:0px;
+        height: 70px;
     }
     main
     {
@@ -193,13 +203,13 @@
                 max-width: 154.8px;//180px
                 max-height: 154.8px;
                 top: 58px;
-                left: 190px;
+                left: 250px;
                 //right:125px;
             }
             img.first-section__image
             {
                 top: 97.18px;//113px;
-                left: 0px;
+                left: 60px;
                 max-width: 332.33px;
                 width: 100%;
             }
@@ -502,5 +512,82 @@
     .first-section .first-section__border
     {
         max-width: 327.64px;   //201.38px;//200.97
+    }
+}
+@media screen and (min-width: 1400px )
+{
+    @include article-image-3(140);
+    .first-section
+    {
+        article.first-section__article-1
+        {
+            .first-section__row-1,
+            {
+               flex-basis: 40%; 
+            }
+            .first-section__row-2
+            {
+                flex-basis: 60%;
+            }
+            img.first-section__image
+            {
+                left:-50px;
+            }
+            .first-section__figure
+            {
+                left:180px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1500px )
+{
+    .first-section
+    {
+        article.first-section__article-3
+        {
+            div.first-section__row-2
+            {
+                img
+                {
+                    left:13%;
+                }
+            }
+            
+        }
+    }
+}
+@media screen and (min-width: 1700px )
+{
+    .first-section
+    {
+        article.first-section__article-3
+        {
+            div.first-section__row-2
+            {
+                img
+                {
+                    left:17%;
+                }
+            }
+            
+        }
+    }
+}
+@media screen and (min-width: 1800px )
+{
+    .first-section
+    {
+        article.first-section__article-3
+        {
+            div.first-section__row-2
+            {
+                img
+                {
+                    left:20%;
+                }
+            }
+            
+        }
     }
 }
