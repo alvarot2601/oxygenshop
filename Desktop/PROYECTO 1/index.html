@@ -5,32 +5,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>oxygen shop</title>
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
-	<style type="text/css">
 		
-		section.seccion_4 article p:nth-of-type(2){
-			
-			font-weight: 400;
-			font-size: 14px;
-			line-height: 21px;
-			margin: 10px 21px 0px 21px;
-		}
 		
-	</style>
 </head>
 <body>
-	<header class="header">
+	<div id="percentage-scroller"></div>
+	<header class="header" id="header">
 		<nav>
 			<ul class="header__ul">
-				<li><span class="header__logo">OXYGENShop</span></li>
-				<li>
-					<button></button>
+				<li class="header__li"><span class="header__logo">OXYGENShop</span></li>
+				<li class="header__li">
+					<button id="hamburguer-button"></button>
 				</li>
 				<li class="header__li">WHY US</li>
 				<li class="header__li">BENEFITS</li>
 				<li class="header__li">PRICES</li>
 				<li class="header__li">CONTACT</li>
 			</ul>
-			<ul class="header__ul">
+			<ul class="header__ul header__ul-2 not-display">
 				<li class="header__li">WHY US</li>
 				<li class="header__li">BENEFITS</li>
 				<li class="header__li">PRICES</li>
@@ -97,7 +89,7 @@
 		</article>
 		<article class="first-section__article first-section__article-3">
 			<div class="first-section__row first-section__row-1">
-				<p class="first-section__p first-section__p-1">Increase your recognition brand!</p>
+				<p class="first-section__p first-section__p-1">Increase recognition your brand!</p>
 				<p class="first-section__p first-section__p-2">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 				</p>
@@ -119,7 +111,7 @@
 					<span class="pricing-article__second-span pricing-article__second-span--red">$0</span>
 				</div>
 				<div>
-					<ul class="pricing-article__list">
+					<ul class="pricing-article__list pricing-article__list-1">
 						<li class="pricing-article__list-item pricing-article__list-item--first">100 MB HHD</li>
 						<li class="pricing-article__list-item">1 subdomain</li>
 						<li class="pricing-article__list-item">2 E-mails</li>
@@ -138,7 +130,7 @@
 					<span class="pricing-article__third-span">Limited offer</span>
 				</div>
 				<div>
-					<ul class="pricing-article__list">
+					<ul class="pricing-article__list pricing-article__list-2">
 						<li class="pricing-article__list-item pricing-article__list-item--first">100 MB HHD</li>
 						<li class="pricing-article__list-item">1 subdomain</li>
 						<li class="pricing-article__list-item">2 E-mails</li>
@@ -157,7 +149,7 @@
 					<span class="pricing-article__third-span">Limited offer</span>
 				</div>
 				<div>
-					<ul class="pricing-article__list">
+					<ul class="pricing-article__list pricing-article__list-3">
 						<li class="pricing-article__list-item pricing-article__list-item--first">100 MB HHD</li>
 						<li class="pricing-article__list-item">1 subdomain</li>
 						<li class="pricing-article__list-item">2 E-mails</li>
@@ -205,14 +197,18 @@
 		</form>
 	</section>
 	<footer>
-		<span>OXYGENShop</span>
-		<span>© 2022 OXYGEN, All Rights Reserved</span>
-		<img src="images/twitter.svg">
-		<img src="images/facebook.svg">
+		<div>
+			<span>OXYGENShop</span>
+			<span>© 2022 OXYGEN, All Rights Reserved</span>
+		</div>
+		<div>
+			<img src="images/twitter.svg">
+			<img src="images/facebook.svg">
+		</div>
 	</footer>
 </body>
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 	window.addEventListener("resize", calcularValor(174));
 	// Get the root element
 	var r = document.querySelector(':root');
@@ -235,5 +231,6 @@
 		//var resultado = (100 * valor1) / porcentaje;
 		alert(resultado);
 	}
-</script>
+</script>-->
+<script type="text/javascript" src="scripts.js"></script>
 </html>

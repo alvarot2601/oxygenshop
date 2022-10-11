@@ -4,10 +4,6 @@
 @import "header";
 @import "main";
 
-//MIXINS
-
-            
-
 * { 
     box-sizing: border-box;
     margin: 0;
@@ -29,6 +25,22 @@ img
     display: block;
     margin: auto;
 }
+//clase para hacer desaparecer el ul del header
+.not-display
+{
+    display: none;
+}
+//percentage scroller
+#percentage-scroller
+{
+    height: 5px;
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
 .first-section  
 {
     background: #F7F7F7;
@@ -251,36 +263,43 @@ footer
     height: 89px;
     background: #F7F7F7;
     box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
-    span
+    div
     {
-        position: absolute;
-        left:17px;
+        span
+        {
+            position: absolute;
+            left:17px;
+        }
+        span:first-child
+        {
+            @include text-features(font-family, $primary-font-family, font-size, 2.6rem, line-height, 30px, font-weight, 300, $primary-color);
+            top:22.48px;
+        }
+        span:nth-child(2)
+        {
+            @include text-features(font-family, $primary-font-family, font-size, 1.1rem, line-height, 15px, font-weight, 400, #A5A5A5);
+            top:53px;
+        }
     }
-    span:first-child
+    div
     {
-        @include text-features(font-family, $primary-font-family, font-size, 2.6rem, line-height, 30px, font-weight, 300, $primary-color);
-        top:22.48px;
+        img
+        {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 33px;
+        }
+        img:nth-of-type(1)
+        {
+            right:74px;
+        }
+        img:nth-of-type(2)
+        {
+            right:32px;
+        }
     }
-    span:nth-child(2)
-    {
-        @include text-features(font-family, $primary-font-family, font-size, 1.1rem, line-height, 15px, font-weight, 400, #A5A5A5);
-        top:53px;
-    }
-    img
-    {
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        top: 33px;
-    }
-    img:nth-of-type(1)
-    {
-        right:74px;
-    }
-    img:nth-of-type(2)
-    {
-        right:32px;
-    }
+    
 }
 
 //BEM
@@ -321,6 +340,16 @@ footer
 }
 .pricing-article__list-item--first{
     margin-top:25px;
+}
+.pricing-article__list-1{
+    .pricing-article__list-item:nth-of-type(4),.pricing-article__list-item:nth-of-type(5){
+        list-style-image: url("../images/x.svg");  
+    }
+}
+.pricing-article__list-2{
+    .pricing-article__list-item:nth-of-type(5){
+        list-style-image: url("../images/x.svg");  
+    }
 }
 
 .third-section__span
