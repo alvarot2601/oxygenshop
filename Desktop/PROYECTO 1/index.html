@@ -4,9 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>oxygen shop</title>
-	<link rel="stylesheet" type="text/css" href="styles/styles.css">
-		
-		
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 	<div id="percentage-scroller"></div>
@@ -17,10 +15,10 @@
 				<li class="header__li">
 					<button id="hamburguer-button"></button>
 				</li>
-				<li class="header__li">WHY US</li>
-				<li class="header__li">BENEFITS</li>
-				<li class="header__li">PRICES</li>
-				<li class="header__li">CONTACT</li>
+				<li class="header__li"><a href="#whyus">WHY US</a></li>
+				<li class="header__li"><a href="#benefits">BENEFITS</a></li>
+				<li class="header__li"><a href="#pricing">PRICES</a></li>
+				<li class="header__li"><a href="#contact">CONTACT</a></li>
 			</ul>
 			<ul class="header__ul header__ul-2 not-display">
 				<li class="header__li">WHY US</li>
@@ -30,7 +28,7 @@
 			</ul>
 		</nav>
 	</header>
-	<main class="main">
+	<main class="main" id="whyus">
 		<section class="main__section">
 			<h1 class="main__span">Sell More!</h1>
 			<p class="main__p">
@@ -43,7 +41,7 @@
 		<section>
 			<img src="images/background.png">
 		</section>
-		<section>
+		<section id="benefits">
 			<div>
 				<h2 class="main__h2">The most popular sales platform in country</h2>
 			</div>
@@ -100,7 +98,7 @@
 			</div>
 		</article>
 	</section>
-	<section class="second-section">
+	<section class="second-section" id="pricing">
 		<span>
 			Pricing
 		</span>
@@ -165,7 +163,7 @@
 		
 	</section>
 	<!--seccion dedicada al formulario-->
-	<section class="third-section">
+	<section class="third-section" id="contact">
 		<div>
 			<p>Any questions?</p>
 			<p>Leave your email address or call us!</p>
@@ -182,7 +180,7 @@
 			<label for="username">NAME</label>
 			<input type="text" name="username" id="username">
 			<label for="usermail">EMAIL</label>
-			<input type="mail" name="usermail" id="usermail">
+			<input type="email" name="usermail" id="usermail">
 			<div>
 				<div class="third-section__first-column">
 					<input class="third-section__checkbox" type="checkbox" name="userconsent" id="userconsent">	
@@ -196,6 +194,17 @@
 			</div>
 		</form>
 	</section>
+	<div class="popup not-display" id="popup">
+		<div class="popup__container">
+			<button class="popup__button">X</button>
+			<p>Subscribe to our newsletter</p>
+			<form action="#" method="POST" id="popupform">
+				<label for="popupmail">Email</label>
+				<input type="email" name="popupmail" id="popupmail">
+				<input type="submit" value="Send">	
+			</form>
+		</div>
+	</div>
 	<footer>
 		<div>
 			<span>OXYGENShop</span>
@@ -207,30 +216,5 @@
 		</div>
 	</footer>
 </body>
-
-<!--<script type="text/javascript">
-	window.addEventListener("resize", calcularValor(174));
-	// Get the root element
-	var r = document.querySelector(':root');
-	// Create a function for setting a variable value
-	function cambiarAncho() {
-		var rs = getComputedStyle(r);
-	    alert(rs.getPropertyValue("--screen-width"))
-	    r.style.setProperty('--screen-width', screen.width);
-	    alert(rs.getPropertyValue("--screen-width"))
-	}
-	function calcularPorcentaje(){
-		var rs = getComputedStyle(r);
-		var porcentaje = (375 * 100) / screen.width;
-		alert(porcentaje);
-		return porcentaje;
-	}
-
-	function calcularValor(valor1){
-		var porcentaje = calcularPorcentaje();
-		//var resultado = (100 * valor1) / porcentaje;
-		alert(resultado);
-	}
-</script>-->
-<script type="text/javascript" src="scripts.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
 </html>
