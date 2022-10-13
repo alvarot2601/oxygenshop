@@ -5,6 +5,7 @@ const form = document.querySelector("form");
 const popupForm = document.getElementById("popupform")
 const popupButton = document.querySelector(".popup__button");
 const popup = document.querySelector(".popup");
+const selector_moneda = document.querySelector("select");
 //variable para comprobar que no se haya mostrado el popup
 let sw = false;
 function openMenu(){
@@ -192,6 +193,85 @@ function showPopUp()
 		});
 	}
 }
+
+async function getApiData(apiURL){
+	try{
+		let result = await fetch(apiURL);
+		let data = await result.json();
+		return data;
+	}catch(error){
+		console.log(error);
+	}
+	
+}
+async function changePrices(){
+	const monedaSeleccionada = selector_moneda.value;
+	const span = document.getElementsByClassName("pricing-article__second-span");
+	let apiURL = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json';
+	let moneda = '';
+	switch(monedaSeleccionada)
+	{
+		case 'USD':
+			apiURL = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json';
+			moneda = '$';
+			break;
+		case 'EUR':
+			apiURL = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json';
+			moneda = '€';
+			break;
+		case 'GBP':
+			apiURL = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/gbp.json';
+			moneda = '£';
+			break;
+	}
+	const arrayMonedas = await getApiData(apiURL);
+	const arrayPrecios = [];
+	let arrayNuevosPrecios = [];
+	const monedaAnterior = span[0].textContent.charAt(0);
+	console.log(apiURL)
+	//el primer for es para almacenar el precio de cada articulo en un array
+	for (var i = 0; i < span.length; i++) {
+		if(monedaAnterior == '$')
+		{
+			if(moneda == '€')
+			{
+				arrayNuevosPrecios[i] = parseInt(span[i].textContent.substr(1)) / parseFloat(arrayMonedas.eur.usd);
+			}
+			else
+			{
+				arrayNuevosPrecios[i] = parseInt(span[i].textContent.substr(1)) / parseFloat(arrayMonedas.gbp.usd);
+			}
+		}
+		else if(monedaAnterior == '€')
+		{
+			if(moneda == '$')
+			{
+				arrayNuevosPrecios[i] = parseInt(span[i].textContent.substr(1)) / parseFloat(arrayMonedas.usd.eur);
+			}
+			else
+			{
+				arrayNuevosPrecios[i] = parseInt(span[i].textContent.substr(1)) * parseFloat(arrayMonedas.gbp.eur);
+			}
+		}
+		else
+		{
+			if(moneda == '$')
+			{
+				arrayNuevosPrecios[i] = parseInt(span[i].textContent.substr(1)) * parseFloat(arrayMonedas.usd.gbp);
+			}
+			else
+			{
+				arrayNuevosPrecios[i] = parseInt(span[i].textContent.substr(1)) * parseFloat(arrayMonedas.eur.gbp);
+			}
+		}
+		
+	}
+	for (var i = 0; i < span.length; i++) {
+		span[i].textContent = moneda + arrayNuevosPrecios[i].toFixed(2);
+	}
+}
+
+
 //EVENTOS
 
 hamburguesa.addEventListener("click",openMenu);
@@ -228,7 +308,10 @@ popupButton.addEventListener("click", closePopUp);
 popup.addEventListener("click", (e)=>{
 	if(e.target.id == "popup")
 		closePopUp();
-}, true)
+});
+
+selector_moneda.addEventListener("change", changePrices);
+
 
 
 

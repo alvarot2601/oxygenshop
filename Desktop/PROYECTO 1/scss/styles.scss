@@ -34,7 +34,7 @@ img
 #percentage-scroller
 {
     height: 5px;
-    background-color: red;
+    background-color: $primary-color;
     position: fixed;
     top: 0;
     left: 0;
@@ -449,36 +449,6 @@ footer
     @include article-div(width, 90.12px, height, 90.12px, left, 160px, top, 15px, border-radius, 41px, background, #FB3B64);
     transform: rotate(-45deg);
 }
-//media queries
-/*
-@media screen and (min-width: 376px) and (max-width: 499px)
-{
-    $screen : var(--screen-width);
-    $percentage : calcularDiferenciaPorcentaje($screen);
-    html{
-        width: var(--screen-width);
-    }
-    .first-section
-    {
-        article:nth-of-type(1)
-        {
-            padding-top: calcularPorcentaje($percentage, 174) * 1px;
-            div
-            {
-                width: calcularPorcentaje(75, 90.12) * 1px;
-                height: calcularPorcentaje(75, 90.12) * 1px;
-                left: calcularPorcentaje(75, 160) * 1px;
-                top: calcularPorcentaje(75, 15) * 1px;
-            }
-            img:nth-of-type(1)
-            {
-                max-width: calcularPorcentaje(75, 192.76) * 1px;
-                left: calcularPorcentaje(75, 55.27) * 1px;
-                top: calcularPorcentaje(75, 37.11) * 1px;
-            }
-        }
-    }
-}*/
 @import "media-queries";
 
 
