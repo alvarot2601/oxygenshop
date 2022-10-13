@@ -207,7 +207,11 @@ async function getApiData(apiURL){
 async function changePrices(){
 	const monedaSeleccionada = selector_moneda.value;
 	const span = document.getElementsByClassName("pricing-article__second-span");
+<<<<<<< HEAD
 	let apiURL = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json';
+=======
+	let apiURL = '';
+>>>>>>> master
 	let moneda = '';
 	switch(monedaSeleccionada)
 	{

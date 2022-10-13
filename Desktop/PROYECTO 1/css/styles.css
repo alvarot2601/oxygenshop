@@ -184,6 +184,7 @@ body {
   margin: 0;
   font-family: "Open Sans";
   font-style: normal;
+  scroll-behaviour: smooth;
 }
 
 img {
@@ -364,6 +365,15 @@ img {
   line-height: 42px;
   font-weight: 400;
   color: #000000;
+}
+.second-section select {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #08A6E4;
+  color: #08A6E4;
 }
 .second-section article {
   position: relative;
