@@ -2,6 +2,11 @@
 const body = document.querySelector("body");
 const hamburguesa = document.getElementById("hamburguer-button");
 const form = document.querySelector("form");
+const popupForm = document.getElementById("popupform")
+const popupButton = document.querySelector(".popup__button");
+const popup = document.querySelector(".popup");
+//variable para comprobar que no se haya mostrado el popup
+let sw = false;
 function openMenu(){
 	const ul = document.querySelector(".header__ul-2")
 	const header = document.querySelector("header");
@@ -28,14 +33,16 @@ function percentageScroller()
 	let windowHeight = window.innerHeight;
 	let heightScrolled = window.pageYOffset;
 	const bodyDocument = document.body.offsetHeight;
-	let actualPercentage = ((heightScrolled + windowHeight) * 100) / bodyDocument;
+	let actualPercentage = ((heightScrolled) * 100) / (bodyDocument - windowHeight);
 	if(actualPercentage>100)
 		actualPercentage = 100;
 	percentageScrollerDiv.style.width = actualPercentage + "%";
 	//enviamos porcentaje a la funcion que crea y muestra el boton returntothetop para que lo muestre cuando el usuario baje un 25%
-	returnToTheTopButton(actualPercentage);
-	//alert(percentageScrollerDiv.style.width);
-
+	returnToTheTopButton(actualPercentage);	
+	if(actualPercentage >= 25 && sw === false)
+	{
+		showPopUp();
+	}
 }
 
 function returnToTheTopButton(percentage)
@@ -50,12 +57,12 @@ function returnToTheTopButton(percentage)
 		const button = document.createElement("button");
 		button.textContent = "TOP";
 		button.id = "returnTop";
-		button.style.width = "80px";
-		button.style.height = "80px";
+		button.style.width = "50px";
+		button.style.height = "50px";
 		button.style.borderRadius = "50px";
 		button.style.position = "fixed";
-		button.style.bottom = "50px";
-		button.style.right = "50px";
+		button.style.bottom = "30px";
+		button.style.right = "30px";
 		button.style.background = "#08A6E4";
 		button.style.border = "none";
 		button.style.fontFamily = "Open Sans";
@@ -74,6 +81,57 @@ function returnToTheTop(){
 			clearInterval(interval);
 	},1);
 }
+//para enviar datos con fetch
+async function sendData(user, mail)
+{
+	let data = 
+	{
+		username: user,
+		email : mail
+	};
+	try{
+		let result = await fetch('https://my-json-server.typicode.com/alvarot2601/prueba/posts',
+			{	
+				method: 'POST',
+				body: JSON.stringify(data),
+				headers:{
+				    'Content-Type': 'application/json'
+				}
+			}
+		);
+		let sentData = await result.json();	
+		console.log(sentData);
+	}catch(error){
+		console.log(error);
+	}
+}
+
+async function sendPopupData(){
+	const input = document.getElementById("popupmail");
+	let usermail = document.getElementById("popupmail").value;
+	let data = {mail: usermail};
+	const mailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if(!mailRegex.test(usermail))
+	{
+		input.style.border = "3px solid red";
+		return false;
+	}
+	try{
+		let result = await fetch("https://my-json-server.typicode.com/alvarot2601/prueba/posts",{
+			method: 'POST',
+			headers: {
+				'Content-Type' : 'application/json'
+			},
+			body: JSON.stringify(data)
+		});
+		let sentData = await result.json();
+		console.log(sentData);
+		closePopUp();
+	}catch(error){
+		console.log(error);
+	};
+}
+
 //funcion  para validar los campos del formulario
 function formValidation(event)
 {
@@ -99,10 +157,41 @@ function formValidation(event)
 	}
 	else
 	{
-		usernameInput.style.borderBottom = "none";
+		mailInput.style.borderBottom = "none";
+		sendData(username.value, usermail.value);
 	}
+	event.preventDefault();
+	return false;
+}
+function popUpValidation(event){
+	
+	return false;
+	event.preventDefault();
+	
 }
 
+function closePopUp()
+{
+	popup.style.display = "none";
+}
+
+function showPopUp()
+{
+	if(sessionStorage.getItem("openmodal") === null)
+	{
+		sessionStorage.setItem("openmodal", true);
+		const popup = document.querySelector(".popup");
+		popup.style.display = "block";
+		//sw = true;
+		document.addEventListener("keydown", (e)=>{
+			if(popup.style.display === "block" && e.key === 'Escape')
+			{
+				e.preventDefault();
+				closePopUp();
+			}
+		});
+	}
+}
 //EVENTOS
 
 hamburguesa.addEventListener("click",openMenu);
@@ -119,6 +208,29 @@ document.addEventListener("click", (e)=> {
 }, true);
 
 form.addEventListener("submit", formValidation);
+popupForm.addEventListener("submit", (e)=>{
+	sendPopupData();
+	e.preventDefault();
+});
+
+//para mostrar popup despues d 5s
+window.addEventListener("load", ()=>{
+	setTimeout( () =>{
+		if(sw === false)
+		{
+			showPopUp();
+		}
+	}, 5000);
+});
+ //para cerrar el popup
+popupButton.addEventListener("click", closePopUp);
+
+popup.addEventListener("click", (e)=>{
+	if(e.target.id == "popup")
+		closePopUp();
+}, true)
+
+
 
 
 
