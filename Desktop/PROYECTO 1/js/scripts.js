@@ -1,4 +1,6 @@
 //import {openMenu} from "./functions.js";
+import {Slider} from "./classes.js";
+import {openMenu, percentageScroller, returnToTheTopButton, returnToTheTop, sendData, sendPopupData, formValidation, popUpValidation, closePopUp, showPopUp, getApiData, changePrices} from "./functions.js";
 const body = document.querySelector("body");
 const hamburguesa = document.getElementById("hamburguer-button");
 const form = document.querySelector("form");
@@ -6,26 +8,8 @@ const popupForm = document.getElementById("popupform")
 const popupButton = document.querySelector(".popup__button");
 const popup = document.querySelector(".popup");
 const selector_moneda = document.querySelector("select");
-//variable para comprobar que no se haya mostrado el popup
-let sw = false;
-function openMenu(){
-	const ul = document.querySelector(".header__ul-2")
-	const header = document.querySelector("header");
-	//si contiene la clase not-display debe mostrar el ul cada vez que se haga click en la hamburguesa
-	if(ul.classList.contains("not-display"))
-	{
-		ul.classList.remove("not-display");
-		header.classList.add("header-open");
-		hamburguesa.style.backgroundImage = "url('./images/x-blue.svg')";
-	}
-	else
-	{
-		header.classList.remove("header-open");
-		ul.classList.add("not-display");
-		hamburguesa.style.backgroundImage = "url('./images/open-menu.svg')";
-	}
-}
 
+/*
 function percentageScroller()
 {
 	
@@ -100,13 +84,17 @@ async function sendData(user, mail)
 				}
 			}
 		);
-		let sentData = await result.json();	
-		console.log(sentData);
+		if(result)
+		{
+			let sentData = await result.json();	
+			console.log(sentData);
+		}
+		
 	}catch(error){
 		console.log(error);
 	}
 }
-
+//para enviar el correo introducido por el usuario en el popup al servidor
 async function sendPopupData(){
 	const input = document.getElementById("popupmail");
 	let usermail = document.getElementById("popupmail").value;
@@ -140,6 +128,7 @@ function formValidation(event)
 	const mailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	const usernameInput = document.querySelector("input#username");
 	const mailInput = document.querySelector("input#usermail");
+	const checkbox = document.querySelector("input#userconsent");
 	if(!usernameRegex.test(usernameInput.value))
 	{
 		usernameInput.style.borderBottom = "1px solid red";
@@ -159,6 +148,17 @@ function formValidation(event)
 	else
 	{
 		mailInput.style.borderBottom = "none";
+		
+	}
+	if(!checkbox.checked)
+	{
+		checkbox.style.outline = "1px solid red";
+		event.preventDefault();
+		return false;
+	}
+	else
+	{
+		checkbox.style.outline = "none";
 		sendData(username.value, usermail.value);
 	}
 	event.preventDefault();
@@ -250,27 +250,27 @@ async function changePrices(){
 			}
 			else
 			{
-				arrayNuevosPrecios[i] = parseInt(span[i].textContent.substr(1)) * parseFloat(arrayMonedas.gbp.eur);
+				arrayNuevosPrecios[i] = parseInt(span[i].textContent.substr(1)) / parseFloat(arrayMonedas.gbp.eur);
 			}
 		}
 		else
 		{
 			if(moneda == '$')
 			{
-				arrayNuevosPrecios[i] = parseInt(span[i].textContent.substr(1)) * parseFloat(arrayMonedas.usd.gbp);
+				arrayNuevosPrecios[i] = parseInt(span[i].textContent.substr(1)) / parseFloat(arrayMonedas.usd.gbp);
 			}
 			else
 			{
-				arrayNuevosPrecios[i] = parseInt(span[i].textContent.substr(1)) * parseFloat(arrayMonedas.eur.gbp);
+				arrayNuevosPrecios[i] = parseInt(span[i].textContent.substr(1)) / parseFloat(arrayMonedas.eur.gbp);
 			}
 		}
 		
 	}
+
 	for (var i = 0; i < span.length; i++) {
 		span[i].textContent = moneda + arrayNuevosPrecios[i].toFixed(2);
 	}
-}
-
+}*/
 
 //EVENTOS
 
@@ -311,6 +311,9 @@ popup.addEventListener("click", (e)=>{
 });
 
 selector_moneda.addEventListener("change", changePrices);
+
+window.addEventListener('load', () => {new Slider('slider');});
+
 
 
 

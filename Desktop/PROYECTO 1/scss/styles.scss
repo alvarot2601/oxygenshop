@@ -26,6 +26,10 @@ img
     display: block;
     margin: auto;
 }
+button, a, input[type=submit]
+{
+    cursor: pointer;
+}
 //clase para hacer desaparecer el ul del header
 .not-display
 {
@@ -74,7 +78,6 @@ img
         position: absolute;
         right:10px;
         top:10px;
-        cursor: pointer;
     }
     button:hover
     {
@@ -459,6 +462,59 @@ footer
     /*Debería ser left = 143.68 pero no aparece igual que en el diseño*/
     @include article-div(width, 90.12px, height, 90.12px, left, 160px, top, 15px, border-radius, 41px, background, #FB3B64);
     transform: rotate(-45deg);
+}
+#slider
+{
+    position:relative;
+    background: black;
+    padding:60px 0px;
+    margin-top:40px;
+    button
+    {
+        width: 50px;
+        height: 50px;
+        padding:10px;
+        color: #ffffff;
+        position: absolute;
+        top:45%;
+        border-radius: 100%;
+        background-color:rgba(0,0,0,0.5);
+        border:1px solid white;
+        font-size: 2.5rem;
+    }
+    button:nth-of-type(1)
+    {
+        left:10px;
+    }
+    button:nth-of-type(2)
+    {
+        right:10px;
+    }
+    img
+    {
+        width: 100%;
+        max-height: 500px;
+        object-fit: contain;
+    }
+    div:nth-of-type(2)
+    {
+        text-align: center;
+        margin:auto;
+        margin-top:20px;
+        div
+        {
+            margin:0px 5px;
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            border-radius: 50%;
+            background: grey;
+        }
+        .slider__circle--active
+        {
+            background: white;
+        }
+    }
 }
 @import "media-queries";
 
