@@ -1,6 +1,6 @@
 //import {openMenu} from "./functions.js";
 import {Slider} from "./classes.js";
-import {openMenu, percentageScroller, returnToTheTopButton, returnToTheTop, sendData, sendPopupData, formValidation, popUpValidation, closePopUp, showPopUp, getApiData, changePrices} from "./functions.js";
+import {body, hamburguesa, form, popupForm, popupButton, popup, selector_moneda, sw, openMenu, percentageScroller, returnToTheTopButton, returnToTheTop, sendData, sendPopupData, formValidation, popUpValidation, closePopUp, showPopUp, getApiData, changePrices} from "./functions.js";
 
 
 //EVENTOS
