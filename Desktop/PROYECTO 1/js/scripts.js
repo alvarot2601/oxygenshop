@@ -1,13 +1,7 @@
 //import {openMenu} from "./functions.js";
 import {Slider} from "./classes.js";
 import {openMenu, percentageScroller, returnToTheTopButton, returnToTheTop, sendData, sendPopupData, formValidation, popUpValidation, closePopUp, showPopUp, getApiData, changePrices} from "./functions.js";
-const body = document.querySelector("body");
-const hamburguesa = document.getElementById("hamburguer-button");
-const form = document.querySelector("form");
-const popupForm = document.getElementById("popupform")
-const popupButton = document.querySelector(".popup__button");
-const popup = document.querySelector(".popup");
-const selector_moneda = document.querySelector("select");
+
 
 //EVENTOS
 
