@@ -5,7 +5,6 @@ export class Slider{
 		this.actualImgCounter = 0;
 		this.actualImage = document.querySelector("#container-slider").children[this.actualImgCounter];
 		this.prevButton = this.slider.querySelector("button:nth-of-type(1)");
-		//this.prevButton.addEventListener("click", this.prevImg);
 		this.nextButton = this.slider.querySelector("button:nth-of-type(2)");
 		this.actualCircle =  document.querySelector("#circle-container-slider").children[this.actualImgCounter];
 		this.eventListeners();
@@ -31,13 +30,11 @@ export class Slider{
 	}		
 	autoSlide(){
 		setInterval(() => {
-			//this.nextImg().bind(this);
 			this.nextImg();
 		},4000);
 	}
 	eventListeners()
 	{
-		//this.prevButton.addEventListener("click", this.prevImg);
 		this.prevButton.addEventListener('click', this.prevImg.bind(this));
 		this.nextButton.addEventListener('click', this.nextImg.bind(this))
 	}

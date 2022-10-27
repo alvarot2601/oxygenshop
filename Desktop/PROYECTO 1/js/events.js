@@ -1,11 +1,9 @@
-//EVENTOS
 
 hamburguesa.addEventListener("click",openMenu);
 
 window.addEventListener("load", percentageScroller);
 window.addEventListener("scroll", percentageScroller);
 
-//para asignar el evento al botón que se crea dinámicamente
 document.addEventListener("click", (e)=> {
 	if(e.target && e.target.id == 'returnTop')
 	{
@@ -19,7 +17,6 @@ popupForm.addEventListener("submit", (e)=>{
 	e.preventDefault();
 });
 
-//para mostrar popup despues d 5s
 window.addEventListener("load", ()=>{
 	setTimeout( () =>{
 		if(sw === false)
@@ -28,7 +25,7 @@ window.addEventListener("load", ()=>{
 		}
 	}, 5000);
 });
- //para cerrar el popup
+
 popupButton.addEventListener("click", closePopUp);
 
 popup.addEventListener("click", (e)=>{

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "OpenSans";
   src: url("../fonts/static/OpenSans/OpenSans-Regular.ttf") format("woff2");
@@ -32,8 +31,6 @@ header button {
   background-color: #ffffff;
   background-position: center;
   background-size: cover;
-  /* right:29px;
-   top:29px;*/
 }
 header ul:nth-of-type(1) {
   height: 70px;
@@ -86,17 +83,6 @@ header ul:nth-of-type(2) li:nth-of-type(4) {
 
 main {
   text-align: center;
-  /*
-  que es mejor?
-  section:nth-of-type(2) img
-  {
-  	margin: auto;
-  	display: block;
-  	width: 100%;
-  	max-width: 500px;
-  	margin-top:51px;
-  }
-  */
 }
 main section:nth-of-type(1) {
   width: 85%;
@@ -184,7 +170,7 @@ body {
   margin: 0;
   font-family: "OpenSans";
   font-style: normal;
-  scroll-behaviour: smooth;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -287,7 +273,6 @@ button, a, input[type=submit] {
   font-size: 1.4rem;
   line-height: 21px;
   margin-top: 18px;
-  /*margin-right: 94px;*/
 }
 .first-section article:nth-of-type(1) {
   position: relative;
@@ -297,7 +282,6 @@ button, a, input[type=submit] {
   padding-bottom: 30px;
 }
 .first-section article:nth-of-type(1) img:nth-of-type(1) {
-  /*nose q max-width ponerle*/
   max-width: 192.76px;
   position: absolute;
   left: 55.27px;
@@ -306,7 +290,6 @@ button, a, input[type=submit] {
 }
 .first-section article:nth-of-type(1) p:nth-of-type(2) {
   margin-top: 42px;
-  /*margin-right: 94px;*/
 }
 .first-section article:nth-of-type(2) {
   position: relative;
@@ -340,7 +323,6 @@ button, a, input[type=submit] {
 }
 .first-section article:nth-of-type(3) p.first-section__p-2 {
   margin-top: 20.33px;
-  /*margin-right: 94px;*/
 }
 .first-section article:nth-of-type(3) div.first-section__row-2 {
   margin-top: 16.67px;
@@ -505,10 +487,6 @@ section:nth-of-type(3) form input {
 section:nth-of-type(3) form input[type=checkbox] {
   zoom: 1.5;
   border-radius: 4px;
-  /*-webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 1px solid #95989A;*/
 }
 section:nth-of-type(3) form label {
   font-family: "OpenSans";
@@ -695,7 +673,6 @@ footer div img:nth-of-type(2) {
 }
 
 .first-section__figure {
-  /*Debería ser left = 143.68 pero no aparece igual que en el diseño*/
   position: absolute;
   width: 90.12px;
   height: 90.12px;
@@ -754,16 +731,9 @@ footer div img:nth-of-type(2) {
 
 @media screen and (max-width: 340px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 157.7658899266px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 174.7755916221px;
     top: 33.6476561792px;
     left: 50.1133375646px;
@@ -783,23 +753,10 @@ footer div img:nth-of-type(2) {
     top: 17.2273098196px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 81.7118505758px;
     height: 81.7118505758px;
     top: 13.6005077523px;
     left: 145.0720826911px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 15.4139087859px;
@@ -807,16 +764,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (max-width: 350px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 162.4043307822px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 179.9141310435px;
     top: 34.6369236513px;
     left: 51.5867089789px;
@@ -836,23 +786,10 @@ footer div img:nth-of-type(2) {
     top: 17.7338062348px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 84.1142430465px;
     height: 84.1142430465px;
     top: 14.0003733433px;
     left: 149.3373156618px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 15.8670897891px;
@@ -860,16 +797,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (min-width: 425px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 197.21183271px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 218.4744417998px;
     top: 42.0605236314px;
     left: 62.6430919188px;
@@ -889,23 +819,10 @@ footer div img:nth-of-type(2) {
     top: 21.5346254109px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 102.1421285277px;
     height: 102.1421285277px;
     top: 17.0010200612px;
     left: 181.3442139862px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 19.267822736px;
@@ -913,16 +830,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (min-width: 500px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 232px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 257.0133333333px;
     top: 49.48px;
     left: 73.6933333333px;
@@ -942,23 +852,10 @@ footer div img:nth-of-type(2) {
     top: 25.3333333333px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 120.16px;
     height: 120.16px;
     top: 20px;
     left: 213.3333333333px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 22.6666666667px;
@@ -966,16 +863,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (min-width: 550px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 255.2068055148px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 282.7222059255px;
     top: 54.429451452px;
     left: 81.0648283954px;
@@ -995,23 +885,10 @@ footer div img:nth-of-type(2) {
     top: 27.8674097976px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 132.1795247873px;
     height: 132.1795247873px;
     top: 22.0005866823px;
     left: 234.6729246113px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 24.93399824px;
@@ -1019,16 +896,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (min-width: 600px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 278.4px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 308.416px;
     top: 59.376px;
     left: 88.432px;
@@ -1048,23 +918,10 @@ footer div img:nth-of-type(2) {
     top: 30.4px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 144.192px;
     height: 144.192px;
     top: 24px;
     left: 256px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 27.2px;
@@ -1072,16 +929,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (min-width: 680px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 315.5603917301px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 349.582879942px;
     top: 67.3014145811px;
     left: 100.2357635111px;
@@ -1101,23 +951,10 @@ footer div img:nth-of-type(2) {
     top: 34.4577439246px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 163.4385201306px;
     height: 163.4385201306px;
     top: 27.2034820457px;
     left: 290.1704751542px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 30.8306129851px;
@@ -1125,16 +962,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (min-width: 720px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 334.1013824885px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 370.1228878648px;
     top: 71.2557603687px;
     left: 106.1251920123px;
@@ -1154,23 +984,10 @@ footer div img:nth-of-type(2) {
     top: 36.4823348694px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 173.0414746544px;
     height: 173.0414746544px;
     top: 28.801843318px;
     left: 307.2196620584px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 32.6420890937px;
@@ -1178,16 +995,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (min-width: 750px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 348px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 385.52px;
     top: 74.22px;
     left: 110.54px;
@@ -1207,23 +1017,10 @@ footer div img:nth-of-type(2) {
     top: 38px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 180.24px;
     height: 180.24px;
     top: 30px;
     left: 320px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 34px;
@@ -1231,16 +1028,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (min-width: 780px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 361.9721239859px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 400.9985437903px;
     top: 77.199916788px;
     left: 114.9781568546px;
@@ -1260,23 +1050,10 @@ footer div img:nth-of-type(2) {
     top: 39.5256916996px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 187.4765966299px;
     height: 187.4765966299px;
     top: 31.2044934471px;
     left: 332.8479301019px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 35.3650925733px;
@@ -1284,16 +1061,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (min-width: 810px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 375.8911211925px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 416.4182328797px;
     top: 80.1685029164px;
     left: 119.3994383236px;
@@ -1313,23 +1083,10 @@ footer div img:nth-of-type(2) {
     top: 41.0455821992px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 194.6856772521px;
     height: 194.6856772521px;
     top: 32.4044069994px;
     left: 345.6470079931px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 36.7249945993px;
@@ -1337,16 +1094,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (min-width: 840px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 389.7849462366px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 431.8100358423px;
     top: 83.1317204301px;
     left: 123.8127240143px;
@@ -1366,23 +1116,10 @@ footer div img:nth-of-type(2) {
     top: 42.5627240143px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 201.8817204301px;
     height: 201.8817204301px;
     top: 33.6021505376px;
     left: 358.4229390681px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 38.082437276px;
@@ -1390,16 +1127,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (min-width: 870px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 403.7122969838px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 447.2389791183px;
     top: 86.1020881671px;
     left: 128.2366589327px;
@@ -1419,23 +1149,10 @@ footer div img:nth-of-type(2) {
     top: 44.0835266821px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 209.0951276102px;
     height: 209.0951276102px;
     top: 34.8027842227px;
     left: 371.2296983759px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 39.4431554524px;
@@ -1443,16 +1160,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (min-width: 900px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 417.6668266923px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 462.6980316851px;
     top: 89.0782525204px;
     left: 132.6692270763px;
@@ -1472,23 +1182,10 @@ footer div img:nth-of-type(2) {
     top: 45.6072971675px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 216.3226116179px;
     height: 216.3226116179px;
     top: 36.0057609217px;
     left: 384.061449832px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 40.8065290446px;
@@ -1496,16 +1193,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (min-width: 930px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 431.5476190476px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 478.0753968254px;
     top: 92.0386904762px;
     left: 137.0783730159px;
@@ -1525,23 +1215,10 @@ footer div img:nth-of-type(2) {
     top: 47.123015873px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 223.5119047619px;
     height: 223.5119047619px;
     top: 37.2023809524px;
     left: 396.8253968254px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 42.1626984127px;
@@ -1549,16 +1226,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (min-width: 960px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 445.4685099846px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 493.4971838198px;
     top: 95.0076804916px;
     left: 141.5002560164px;
@@ -1578,23 +1248,10 @@ footer div img:nth-of-type(2) {
     top: 48.6431131592px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 230.7219662058px;
     height: 230.7219662058px;
     top: 38.4024577573px;
     left: 409.6262160778px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 43.5227854583px;
@@ -1602,16 +1259,9 @@ footer div img:nth-of-type(2) {
 }
 @media screen and (min-width: 990px) {
   .first-section article:nth-of-type(1) {
-    /*@if $percentage >= 50{
-        padding-top: calcularPorcentaje($percentage, 174) * 1px;
-    }*/
     padding-top: 459.4665962503px;
   }
   .first-section article:nth-of-type(1) img:nth-of-type(1), .first-section article:nth-of-type(1) source {
-    /*@if $percentage >= 50{
-        max-width: calcularPorcentaje($percentage, 192.76) * 1px;
-        top: calcularPorcentaje($percentage, 37.11) * 1px;
-    }*/
     max-width: 509.0044890415px;
     top: 97.9931344072px;
     left: 145.946659625px;
@@ -1631,23 +1281,10 @@ footer div img:nth-of-type(2) {
     top: 50.1716398204px;
   }
   .first-section__figure {
-    /*@if $percentage >= 50{
-        width: calcularPorcentaje($percentage, 90.12) * 1px;
-        height: calcularPorcentaje($percentage, 90.12) * 1px;
-        top: calcularPorcentaje($percentage, 15) * 1px;
-    }*/
     width: 237.9720095062px;
     height: 237.9720095062px;
     top: 39.6091893319px;
     left: 422.4980195405px;
-  }
-  section:nth-of-type(3) form input[type=submit] {
-    /*
-    @if $ancho-pantalla == 'menor' {
-        margin-left: calcularPorcentaje($percentage, 86) * 1px;
-    }@else{
-        margin-left: calcularPorcentaje($percentage, 116) * 1px;
-    }*/
   }
   footer span {
     left: 44.8904145762px;
@@ -2031,7 +1668,6 @@ footer div img:nth-of-type(2) {
     margin-top: 65.274px;
   }
   .first-section article.first-section__article-3 p.first-section__p-2 {
-    /*margin-right: 94px;*/
     margin-top: 24.09px;
   }
   .first-section .first-section__border {
@@ -2092,7 +1728,6 @@ footer div img:nth-of-type(2) {
     margin-top: 71.208px;
   }
   .first-section article.first-section__article-3 p.first-section__p-2 {
-    /*margin-right: 94px;*/
     margin-top: 26.28px;
   }
   .first-section .first-section__border {
@@ -2153,7 +1788,6 @@ footer div img:nth-of-type(2) {
     margin-top: 77.142px;
   }
   .first-section article.first-section__article-3 p.first-section__p-2 {
-    /*margin-right: 94px;*/
     margin-top: 28.47px;
   }
   .first-section .first-section__border {
