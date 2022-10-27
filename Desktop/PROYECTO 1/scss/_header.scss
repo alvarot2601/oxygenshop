@@ -67,6 +67,12 @@ header
         {
             margin-bottom:0px;
         }
+        a
+        {
+            @include text-features(font-family, $secondary-font-family, font-size, 1.1rem, line-height, 15px, font-weight, 700, $grey-color);
+            letter-spacing: 3.28px;
+            text-decoration: none;
+        }
     }
 }
 .header-open

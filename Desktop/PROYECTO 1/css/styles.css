@@ -75,6 +75,15 @@ header ul:nth-of-type(2) li {
 header ul:nth-of-type(2) li:nth-of-type(4) {
   margin-bottom: 0px;
 }
+header ul:nth-of-type(2) a {
+  font-family: "Raleway";
+  font-size: 1.1rem;
+  line-height: 15px;
+  font-weight: 700;
+  color: #A5A5A5;
+  letter-spacing: 3.28px;
+  text-decoration: none;
+}
 
 .header-open {
   padding-bottom: 33.65px;
