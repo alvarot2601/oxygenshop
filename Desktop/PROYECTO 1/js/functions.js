@@ -282,7 +282,12 @@ async function changePrices(){
 	}
 
 	for (var i = 0; i < span.length; i++) {
-		span[i].textContent = moneda + arrayNuevosPrecios[i].toFixed(2);
+		if(i==0)
+		{
+			span[i].textContent = moneda + arrayNuevosPrecios[i];
+		}else{
+			span[i].textContent = moneda + arrayNuevosPrecios[i].toFixed(2);
+		}
 	}
 }
 export {body, hamburguesa, form, popupForm, popupButton, popup, selector_moneda, sw, openMenu, percentageScroller, returnToTheTopButton, returnToTheTop, sendData, sendPopupData, formValidation, popUpValidation, closePopUp, showPopUp, getApiData, changePrices};
