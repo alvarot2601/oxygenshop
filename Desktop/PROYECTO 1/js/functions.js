@@ -9,7 +9,6 @@ let sw=false;
 function openMenu(){
 	const ul = document.querySelector(".header__ul-2")
 	const header = document.querySelector("header");
-	//si contiene la clase not-display debe mostrar el ul cada vez que se haga click en la hamburguesa
 	if(ul.classList.contains("not-display"))
 	{
 		ul.classList.remove("not-display");
@@ -36,7 +35,6 @@ function percentageScroller()
 	if(actualPercentage>100)
 		actualPercentage = 100;
 	percentageScrollerDiv.style.width = actualPercentage + "%";
-	//enviamos porcentaje a la funcion que crea y muestra el boton returntothetop para que lo muestre cuando el usuario baje un 25%
 	returnToTheTopButton(actualPercentage);	
 	if(actualPercentage >= 25 && sw === false)
 	{
@@ -70,7 +68,6 @@ function returnToTheTopButton(percentage)
 		body.appendChild(button);
 	}	
 }
-//funcion para scrollear hasta el top mediante js
 function returnToTheTop(){
 	const interval = setInterval(() =>{
 		let actualYCoord = window.pageYOffset;
@@ -80,7 +77,6 @@ function returnToTheTop(){
 			clearInterval(interval);
 	},1);
 }
-//para enviar datos con fetch
 async function sendData(user, mail)
 {
 	let data = 
@@ -108,7 +104,6 @@ async function sendData(user, mail)
 		console.log(error);
 	}
 }
-//para enviar el correo introducido por el usuario en el popup al servidor
 async function sendPopupData(){
 	const input = document.getElementById("popupmail");
 	let usermail = document.getElementById("popupmail").value;
@@ -135,7 +130,6 @@ async function sendPopupData(){
 	};
 }
 
-//funcion  para validar los campos del formulario
 function formValidation(event)
 {
 	const usernameRegex  = /^[A-Za-zÀ-ÿ\s]{2,100}$/;
@@ -214,7 +208,6 @@ async function getApiData(apiURL){
 		let data = await result.json();
 		return data;
 	}catch(error){
-		console.log(error);
 	}
 	
 }
@@ -243,7 +236,6 @@ async function changePrices(){
 	let arrayNuevosPrecios = [];
 	const monedaAnterior = span[0].textContent.charAt(0);
 	console.log(apiURL)
-	//el primer for es para almacenar el precio de cada articulo en un array
 	for (var i = 0; i < span.length; i++) {
 		if(monedaAnterior == '$')
 		{

@@ -19,7 +19,7 @@ body
     margin:0;
     font-family: $primary-font-family;
     font-style: normal;
-    scroll-behaviour: smooth;
+    scroll-behavior: smooth;
 }
 img
 {
@@ -30,12 +30,10 @@ button, a, input[type=submit]
 {
     cursor: pointer;
 }
-//clase para hacer desaparecer el ul del header
 .not-display
 {
     display: none;
 }
-//percentage scroller
 #percentage-scroller
 {
     height: 5px;
@@ -45,7 +43,6 @@ button, a, input[type=submit]
     left: 0;
     z-index: 1;
 }
-//clase del popup
 .popup
 {
     padding:10px;
@@ -124,23 +121,18 @@ button, a, input[type=submit]
     p.first-section__p-2
     {
         @include article-p(font-family, $primary-font-family, font-size, 1.4rem, line-height, 21px, margin-top, 18px);
-       
-        /*margin-right: 94px;*/
     }
     article:nth-of-type(1)
     {
-        //el valor de margin-top es 0 ya que existe un padding-top del padre
         @include article-container(padding-top, 174px, 0px);
         img:nth-of-type(1)
         {
-            /*nose q max-width ponerle*/
             max-width: 192.76px;
             @include article-images(left, 55.27px, top, 37.11px, width, 61.38%);
         }
         p:nth-of-type(2)
         {
             margin-top: 42px;            
-            /*margin-right: 94px;*/
         }
     }
     article:nth-of-type(2)
@@ -163,7 +155,6 @@ button, a, input[type=submit]
         p.first-section__p-2
         {
             margin-top:20.33px;
-            /*margin-right: 94px;*/
         }
         div.first-section__row-2
         {
@@ -172,7 +163,6 @@ button, a, input[type=submit]
             background: #55DFB4;
             border: 1px solid #E8E9ED;
             border-radius: 5px;
-            //es la unica imagen de  los article que aparece dentro del div
             img
             {
                 @include article-images(left, -11.69px, top, 24.64px, width, 93.86%);
@@ -204,7 +194,6 @@ button, a, input[type=submit]
     }
     article
     {
-        //añado pos relative para no hacer las 2 columnas de los divs con display flex
         position: relative;
         margin-top:54px;
         max-width: 380px;
@@ -288,7 +277,6 @@ section:nth-of-type(3)
     }
     form
     {
-        //deberia  ser 56px
         margin-top:30px;
         input
         {
@@ -300,13 +288,8 @@ section:nth-of-type(3)
         }
         input[type=checkbox]
         {
-           //para hacer el checkbox más grande
             zoom:1.5;
             border-radius: 4px;
-            /*-webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            outline: 1px solid #95989A;*/
         }
         label
         {
@@ -384,7 +367,6 @@ footer
     
 }
 
-//BEM
 .pricing-article__first-span{
     @include pricing-article-text;
     @include text-features(font-family, $secondary-font-family, font-size, 2rem, line-height, 24px, font-weight, 700);
@@ -459,7 +441,6 @@ footer
 }
 .first-section__figure
 {
-    /*Debería ser left = 143.68 pero no aparece igual que en el diseño*/
     @include article-div(width, 90.12px, height, 90.12px, left, 160px, top, 15px, border-radius, 41px, background, #FB3B64);
     transform: rotate(-45deg);
 }
