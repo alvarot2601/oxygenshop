@@ -1,12 +1,12 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   src: url("../fonts/static/OpenSans/OpenSans-Regular.ttf") format("woff2");
   font-family: "Raleway";
   src: url("../fonts/static/Raleway-Regular.ttf") format("woff2");
 }
 @font-face {
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   src: url("../fonts/static/OpenSans/OpenSans-Regular.ttf") format("woff2");
   font-family: "Raleway";
   src: url("../fonts/static/Raleway-Regular.ttf") format("woff2");
@@ -61,7 +61,7 @@ header ul:nth-of-type(1) a:hover {
 }
 header ul:nth-of-type(2) {
   list-style-type: none;
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-weight: 700;
   font-size: 1.1rem;
   line-height: 15px;
@@ -111,7 +111,7 @@ main section:nth-of-type(1) h1 {
   color: #000000;
 }
 main section:nth-of-type(1) p {
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-size: 1.6rem;
   line-height: 23px;
   font-weight: 400;
@@ -154,7 +154,7 @@ main section:nth-of-type(3) img:nth-of-type(3) {
 }
 
 .main__span {
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-size: 1.6rem;
   line-height: 22px;
   font-weight: 700;
@@ -182,7 +182,7 @@ html {
 body {
   min-width: 320px;
   margin: 0;
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-style: normal;
   scroll-behaviour: smooth;
 }
@@ -283,7 +283,7 @@ button, a, input[type=submit] {
 .first-section p.first-section__p-2 {
   margin: 0px 22px;
   font-weight: 400;
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-size: 1.4rem;
   line-height: 21px;
   margin-top: 18px;
@@ -466,7 +466,7 @@ section:nth-of-type(3) > div p:nth-of-type(1) {
   margin-bottom: 5px;
 }
 section:nth-of-type(3) > div p:nth-of-type(2) {
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-size: 1.6rem;
   line-height: 22px;
   font-weight: 400;
@@ -479,7 +479,7 @@ section:nth-of-type(3) ul {
 }
 section:nth-of-type(3) ul li {
   list-style-image: url("../images/email.svg");
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-size: 1.6rem;
   line-height: 22px;
   font-weight: 600;
@@ -511,7 +511,7 @@ section:nth-of-type(3) form input[type=checkbox] {
   outline: 1px solid #95989A;*/
 }
 section:nth-of-type(3) form label {
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-size: 1.1rem;
   line-height: 15px;
   font-weight: 600;
@@ -533,7 +533,7 @@ section:nth-of-type(3) form input[type=submit] {
   border-radius: 35px;
   width: 226px;
   height: 57px;
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-size: 1.3rem;
   line-height: 18px;
   font-weight: 700;
@@ -554,7 +554,7 @@ footer div span {
   left: 17px;
 }
 footer div span:first-child {
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-size: 2.6rem;
   line-height: 30px;
   font-weight: 300;
@@ -562,7 +562,7 @@ footer div span:first-child {
   top: 22.48px;
 }
 footer div span:nth-child(2) {
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-size: 1.1rem;
   line-height: 15px;
   font-weight: 400;
@@ -595,7 +595,7 @@ footer div img:nth-of-type(2) {
 }
 
 .pricing-article__second-span {
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-size: 4.6rem;
   line-height: 64px;
   font-weight: 300;
@@ -615,7 +615,7 @@ footer div img:nth-of-type(2) {
 }
 
 .pricing-article__button-span {
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-size: 1.3rem;
   line-height: 18px;
   font-weight: 700;
@@ -652,7 +652,7 @@ footer div img:nth-of-type(2) {
 
 .pricing-article__list-item {
   margin-top: 20px;
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-size: 1.4rem;
   line-height: 19px;
   font-weight: 400;
@@ -1956,7 +1956,7 @@ footer div img:nth-of-type(2) {
     position: static;
   }
   footer div:first-child span:nth-child(2) {
-    font-family: "Open Sans";
+    font-family: "OpenSans";
     font-size: 1.1rem;
     line-height: 15px;
     font-weight: 400;
