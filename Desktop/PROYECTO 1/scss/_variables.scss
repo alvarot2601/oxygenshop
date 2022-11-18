@@ -1,11 +1,12 @@
+
 @font-face {
-    font-family: "OpenSans";
-    src: url("../fonts/static/OpenSans/OpenSans-Regular.ttf") format("woff2");
+    font-family: "Open Sans";
+    src: url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap') format("woff2");
     font-family: "Raleway";
     src: url("../fonts/static/Raleway-Regular.ttf") format("woff2");
 }
 
-$primary-font-family: "OpenSans";
+$primary-font-family: "Open Sans";
 $secondary-font-family: "Raleway";
 $primary-color:#08A6E4;
 $green-color:#55DFB4;
