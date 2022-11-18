@@ -1,15 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @font-face {
-  font-family: 'Open Sans', sans-serif;Ç
+  font-family: 'Open Sans', sans-serif;
   font-family: "Raleway";
   src: url("../fonts/static/Raleway-Regular.ttf") format("woff2");
 }
-@font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/static/OpenSans/OpenSans-Regular.ttf") format("woff2");
-  font-family: "Raleway";
-  src: url("../fonts/static/Raleway-Regular.ttf") format("woff2");
-}
+
 header {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
   height: 70px;
